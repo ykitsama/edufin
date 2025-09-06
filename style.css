@@ -89,3 +89,23 @@ footer {
   margin-top: 2rem;
 }
 
+/* Learn Page Styles */
+.learn-content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  line-height: 1.6;
+}
+
+.learn-content section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-left: 4px solid #0077cc;
+  border-radius: 8px;
+}
+
+.learn-content h2 {
+  margin-bottom: 0.5rem;
+  color: #0077cc;
+}
