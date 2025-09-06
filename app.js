@@ -29,7 +29,7 @@ function simulateReturn(type) {
     if (selected === "CIC") result = "CIC MMF: 9.5% return → Ksh 10,000 grows to ~Ksh 10,950 in a year.";
     if (selected === "Britam") result = "Britam MMF: 10% return → Ksh 10,000 grows to ~Ksh 11,000 in a year.";
     if (selected === "Sanlam") result = "Sanlam MMF: 10.5% return → Ksh 10,000 grows to ~Ksh 11,050 in a year.";
-    if (selected === "Zidi") result = "Zidi MMF: 9.8% return → Ksh 10,000 grows to ~Ksh 10,980 in a year.";
+    if (selected === "Zidii") result = "Zidii MMF: 9.8% return → Ksh 10,000 grows to ~Ksh 10,980 in a year.";
     if (selected === "KCB") result = "KCB M-Pesa Investment: 9% return → Ksh 10,000 grows to ~Ksh 10,900 in a year.";
     if (!selected) result = "Please select a Money Market Fund.";
   }
