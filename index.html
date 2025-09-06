@@ -1,1 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduFin AI Mentor</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>EduFin AI Mentor</h1>
+    <nav>
+      <button onclick="showSection('dashboard')">Home</button>
+      <button onclick="showSection('learn')">Learn</button>
+      <button onclick="showSection('planner')">Planner</button>
+      <button onclick="showSection('investments')">Investments</button>
+      <button onclick="showSection('profile')">Profile</button>
+    </nav>
+  </header>
+
+  <!-- Sections -->
+  <main>
+    <!-- Dashboard -->
+    <section id="dashboard" class="active">
+      <h2>Welcome 👋</h2>
+      <p id="dailyTip"></p>
+      <div class="quick-actions">
+        <button onclick="showSection('planner')">💰 Savings Goal</button>
+        <button onclick="showSection('planner')">📊 My Budget</button>
+        <button onclick="showSection('learn')">📈 Learn & Invest</button>
+      </div>
+    </section>
+
+    <!-- Learn -->
+    <section id="learn">
+      <h2>Learn & Explore</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>SACCOs</h3>
+          <p>Select a SACCO to view estimated returns and benefits.</p>
+          <select id="saccoSelect">
+            <option value="">-- Choose SACCO --</option>
+            <option value="Mwalimu">Mwalimu SACCO (5% dividend)</option>
+            <option value="Harambee">Harambee SACCO (6% dividend)</option>
+            <option value="Stima">Stima SACCO (6.5% dividend)</option>
+            <option value="Safaricom">Safaricom (Kona) SACCO (7% dividend)</option>
+          </select>
+          <button onclick="simulateReturn('SACCO')">Simulate SACCO</button>
+        </div>
+
+        <div class="card">
+          <h3>Money Market Funds</h3>
+          <p>Select a MMF to simulate growth on your savings.</p>
+          <select id="mmfSelect">
+            <option value="">-- Choose MMF --</option>
+            <option value="CIC">CIC MMF (9.5% return)</option>
+            <option value="Britam">Britam MMF (10% return)</option>
+            <option value="Sanlam">Sanlam MMF (10.5% return)</option>
+            <option value="Zidi">Zidi MMF (9.8% return)</option>
+            <option value="KCB">KCB M-Pesa Investment (9% return)</option>
+          </select>
+          <button onclick="simulateReturn('MMF')">Simulate MMF</button>
+        </div>
+
+        <div class="card">
+          <h3>Stocks</h3>
+          <p>Explore stock growth potential (Safaricom, Equity, KCB).</p>
+          <button onclick="simulateReturn('Stocks')">Simulate Stocks</button>
+        </div>
+      </div>
+      <p id="simulationResult"></p>
+    </section>
+
+    <!-- Planner -->
+    <section id="planner">
+      <h2>Budget Planner</h2>
+      <label>Weekly Income (Ksh): <input type="number" id="income"></label>
+      <label>Expenses (Ksh): <input type="number" id="expenses"></label>
+      <button onclick="calculatePlan()">Plan My Budget</button>
+      <p id="planOutput"></p>
+      <canvas id="planChart" width="300" height="300"></canvas>
+    </section>
+
+    <!-- Investments -->
+    <section id="investments">
+      <h2>Investment Calculator</h2>
+      <label>Amount (Ksh): <input type="number" id="invAmount"></label>
+      <label>Years: <input type="number" id="invYears" value="1"></label>
+      <button onclick="projectInvestment()">Project</button>
+      <canvas id="invChart" width="400" height="300"></canvas>
+    </section>
+
+    <!-- Profile -->
+    <section id="profile">
+      <h2>My Profile</h2>
+      <label>Name: <input type="text" id="userName" placeholder="Your name"></label>
+      <label>Occupation: <input type="text" id="userJob" placeholder="Gig worker / Student"></label>
+      <button onclick="saveProfile()">Save</button>
+      <p id="profileSummary"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 EduFin AI Mentor | Built for Hackathon</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
 
