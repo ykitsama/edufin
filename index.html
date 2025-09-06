@@ -24,18 +24,78 @@
   <main>
     <!-- Dashboard -->
     <section id="dashboard" class="active">
-      <h2>Welcome</h2>
+      <h2>Welcome 👋</h2>
       <p id="dailyTip"></p>
       <div class="quick-actions">
-        <button onclick="showSection('planner')">Savings Goal</button>
-        <button onclick="showSection('planner')">My Budget</button>
-        <button onclick="showSection('learn')">Learn & Invest</button>
+        <button onclick="showSection('planner')">💰 Savings Goal</button>
+        <button onclick="showSection('planner')">📊 My Budget</button>
+        <button onclick="showSection('learn')">📈 Learn & Invest</button>
       </div>
     </section>
 
     <!-- Learn -->
     <section id="learn">
-      <h2>Learn & Explore</h2>
+      <h2>📚 Learn & Explore</h2>
+
+      <!-- Educational Content -->
+      <article>
+        <h3>💳 What is a SACCO?</h3>
+        <p>
+          Savings and Credit Cooperative Organizations (SACCOs) are
+          member-owned financial institutions where people save
+          together and access affordable loans.
+        </p>
+        <h4>Examples in Kenya:</h4>
+        <ul>
+          <li>Safaricom Kona SACCO</li>
+          <li>Stima SACCO</li>
+          <li>Mwalimu SACCO</li>
+        </ul>
+        <p><strong>Benefits:</strong> Low-interest loans, collective saving power, annual dividends.</p>
+      </article>
+
+      <article>
+        <h3>🏦 Money Market Funds (MMFs)</h3>
+        <p>
+          MMFs pool members’ funds into short-term, safe investments
+          like Treasury bills. They are low-risk and provide steady returns.
+        </p>
+        <h4>Popular MMFs in Kenya:</h4>
+        <ul>
+          <li>Britam Money Market Fund</li>
+          <li>KCB M-Pesa (MMF option)</li>
+          <li>Zidi Money Market Fund</li>
+        </ul>
+        <p><strong>Benefits:</strong> Liquidity (easy withdrawals), low risk, steady 8–11% returns.</p>
+      </article>
+
+      <article>
+        <h3>📈 Stocks & Investments</h3>
+        <p>
+          Buying shares in a company makes you a part-owner. Stocks
+          can grow in value and may also pay dividends. They carry
+          higher risk but can bring higher returns.
+        </p>
+        <h4>Commonly Traded in Kenya:</h4>
+        <ul>
+          <li>Safaricom PLC</li>
+          <li>Equity Bank</li>
+          <li>KCB Group</li>
+        </ul>
+        <p><strong>Benefits:</strong> Potential for high returns, dividend payments.</p>
+      </article>
+
+      <article>
+        <h3>💡 Pro-Tips from Your Mentor</h3>
+        <ul>
+          <li>Start small — consistency matters more than size.</li>
+          <li>Diversify — combine SACCO, MMF, and stocks for balance.</li>
+          <li>Set financial goals and stick to them.</li>
+          <li>Always research before investing.</li>
+        </ul>
+      </article>
+
+      <!-- Interactive Cards -->
       <div class="cards">
         <div class="card">
           <h3>SACCOs</h3>
@@ -70,6 +130,7 @@
           <button onclick="simulateReturn('Stocks')">Simulate Stocks</button>
         </div>
       </div>
+
       <p id="simulationResult"></p>
     </section>
 
@@ -109,4 +170,3 @@
   <script src="app.js"></script>
 </body>
 </html>
-
