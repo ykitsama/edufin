@@ -109,3 +109,19 @@ footer {
   margin-bottom: 0.5rem;
   color: #0077cc;
 }
+/* Learn page navigation buttons */
+.nav-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #005fa3;
+}
+
